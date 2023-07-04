@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fotos-colecciones",
+      "handler": "fotos-colecciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fotos-colecciones/count",
+      "handler": "fotos-colecciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fotos-colecciones/:id",
+      "handler": "fotos-colecciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fotos-colecciones",
+      "handler": "fotos-colecciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fotos-colecciones/:id",
+      "handler": "fotos-colecciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fotos-colecciones/:id",
+      "handler": "fotos-colecciones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

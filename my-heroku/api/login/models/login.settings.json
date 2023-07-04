@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logins",
+  "info": {
+    "name": "Login"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "correo": {
+      "type": "email"
+    },
+    "clave": {
+      "type": "string"
+    },
+    "cliente": {
+      "via": "login",
+      "model": "cliente"
+    }
+  }
+}

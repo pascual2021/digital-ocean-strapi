@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "name": "Cliente"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Apellido": {
+      "type": "string"
+    },
+    "TipoDocumento": {
+      "type": "enumeration",
+      "enum": [
+        "DNI",
+        "RUC"
+      ]
+    },
+    "Direccion": {
+      "type": "string"
+    },
+    "Telefono": {
+      "type": "string"
+    },
+    "Distrito": {
+      "type": "string"
+    },
+    "Postal": {
+      "type": "string"
+    },
+    "Calle": {
+      "type": "string"
+    },
+    "Moroso": {
+      "type": "boolean"
+    },
+    "NumDocumento": {
+      "type": "string"
+    },
+    "ordens": {
+      "via": "Cliente",
+      "collection": "orden"
+    },
+    "login": {
+      "model": "login",
+      "via": "cliente"
+    }
+  }
+}

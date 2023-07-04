@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_items",
+  "info": {
+    "name": "OrderItem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "orden": {
+      "via": "order_items",
+      "model": "orden"
+    },
+    "Libro": {
+      "via": "order_items",
+      "model": "libro"
+    },
+    "Cantidad": {
+      "type": "integer"
+    },
+    "Precio": {
+      "type": "decimal"
+    },
+    "Subtotal": {
+      "type": "decimal"
+    }
+  }
+}

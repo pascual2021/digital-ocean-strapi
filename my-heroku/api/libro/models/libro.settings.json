@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "libros",
+  "info": {
+    "name": "Libro"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "default": 0
+    },
+    "sku": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "categoria": {
+      "model": "categoria",
+      "via": "libros"
+    },
+    "editorial": {
+      "via": "libros",
+      "model": "editorial"
+    },
+    "order_items": {
+      "collection": "order-item",
+      "via": "Libro"
+    },
+    "stock": {
+      "type": "integer",
+      "default": 0
+    },
+    "PrecioDescuento": {
+      "type": "decimal",
+      "default": 0
+    },
+    "portada": {
+      "type": "boolean",
+      "default": false
+    },
+    "tienda": {
+      "type": "boolean",
+      "default": false
+    },
+    "Autor": {
+      "type": "string",
+      "default": "-"
+    },
+    "coleccions": {
+      "collection": "coleccion",
+      "via": "libros"
+    },
+    "inactivo": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

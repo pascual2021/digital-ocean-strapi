@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordens",
+  "info": {
+    "name": "Orden",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Total": {
+      "type": "decimal"
+    },
+    "Cliente": {
+      "model": "cliente",
+      "via": "ordens"
+    },
+    "order_items": {
+      "collection": "order-item",
+      "via": "orden"
+    },
+    "SubTotal": {
+      "type": "decimal"
+    },
+    "Impuesto": {
+      "type": "decimal"
+    },
+    "pagado": {
+      "type": "boolean",
+      "default": true
+    },
+    "anulado": {
+      "type": "boolean",
+      "default": false
+    },
+    "preferenciaID": {
+      "type": "string"
+    },
+    "pagoID": {
+      "type": "string"
+    },
+    "Despachado": {
+      "type": "boolean",
+      "default": false
+    },
+    "FechaDespacho": {
+      "type": "date"
+    },
+    "Observaciones": {
+      "type": "text"
+    }
+  }
+}

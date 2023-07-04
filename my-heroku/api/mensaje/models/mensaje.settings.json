@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mensajes",
+  "info": {
+    "name": "Mensaje"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "correo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "enviado": {
+      "type": "boolean"
+    }
+  }
+}

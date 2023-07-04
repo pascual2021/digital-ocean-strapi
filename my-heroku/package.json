@@ -1,0 +1,40 @@
+{
+  "name": "my-heroku",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "knex": "latest",
+    "mysql": "latest",
+    "strapi": "3.3.4",
+    "strapi-admin": "3.3.4",
+    "strapi-connector-bookshelf": "3.3.4",
+    "strapi-plugin-content-manager": "3.3.4",
+    "strapi-plugin-content-type-builder": "3.3.4",
+    "strapi-plugin-email": "3.3.4",
+    "strapi-plugin-graphql": "3.3.4",
+    "strapi-plugin-upload": "3.3.4",
+    "strapi-plugin-users-permissions": "3.3.4",
+    "strapi-provider-upload-cloudinary": "^3.3.4",
+    "strapi-utils": "3.3.4"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "bd28e675-a1f4-408f-883d-ae3427d026f0"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0 <=7.x.x"
+  },
+  "license": "MIT"
+}

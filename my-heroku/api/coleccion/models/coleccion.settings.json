@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coleccions",
+  "info": {
+    "name": "Coleccion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "libros": {
+      "via": "coleccions",
+      "collection": "libro",
+      "dominant": true
+    },
+    "portada": {
+      "type": "boolean",
+      "default": false
+    },
+    "inactiva": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
